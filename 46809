@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rialo Mining Game</title>
+ 
+  <style>
+      
+      body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  padding: 40px 20px;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.cartoon-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cartoon-img {
+  width: 250px;
+  height: auto;
+  filter: grayscale(100%);
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 5px;
+}
+
+.counter {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+  </style>
+  
+  
+</head>
+<body>
+  <div class="game-container">
+    <h1 class="game-title">Rialo tapp to earn</h1>
+    <div class="cartoon-container" onclick="mine()">
+      <img src="Rialo.jpg" alt="Rialo Cartoon" class="cartoon-img">
+      <div class="label">Rialo</div>
+    </div>
+    <div class="counter">
+      <p>Points: <span id="points">0</span></p>
+    </div>
+  </div>
+
+  <script>
+      
+      let points = 0;
+
+function mine() {
+  points++;
+  document.getElementById('points').innerText = points;
+}
+
+  </script>
+</body>
+</html>
